@@ -763,7 +763,7 @@ body {
 
 .latest-release-title {
   position: absolute;
-  top: 4px;
+  top: 2px;
   left: 50%;
   z-index: 2;
   margin: 0;
