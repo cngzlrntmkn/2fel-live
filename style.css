@@ -87,6 +87,7 @@ body {
 }
 
 .top-gradient-zone {
+  display: none;
   position: absolute;
   top: 0;
   height: calc(var(--top-gradient-y, 7%) + 5%);
@@ -610,6 +611,29 @@ body {
   transition: opacity 0.2s ease;
 }
 
+.scene-nav a,
+.hero-actions a,
+.latest-release-title {
+  font-family: "Milker UI", sans-serif;
+}
+
+.scene-nav .booking-button {
+  font-family: "Milker UI", sans-serif;
+}
+
+.hero-actions a {
+  font-family: "Milker UI", sans-serif;
+}
+
+.hero-actions > a {
+  font-family: "Milker UI", sans-serif !important;
+  text-transform: lowercase;
+}
+
+.hero-actions > a > span {
+  font-family: "Milker UI", sans-serif !important;
+}
+
 .scene-nav a:hover,
 .scene-nav a:focus-visible {
   opacity: 0.62;
@@ -628,6 +652,20 @@ body {
   color: #000;
   -webkit-text-fill-color: currentColor;
   transition: color 0.5s ease, -webkit-text-fill-color 0.5s ease, opacity 0.2s ease;
+}
+
+.scene-nav > a:first-of-type,
+.scene-nav > a:first-of-type > span {
+  font-family: "Milker UI", sans-serif;
+  text-transform: lowercase;
+  -webkit-text-fill-color: currentColor;
+  transition: color 0.5s ease, -webkit-text-fill-color 0.5s ease, opacity 0.2s ease;
+}
+
+.scene-nav > a:last-of-type,
+.scene-nav > a:last-of-type > span {
+  font-family: "Milker UI", sans-serif;
+  text-transform: lowercase;
 }
 
 .hero-actions a > span {
@@ -671,7 +709,7 @@ body {
   width: clamp(135px, 8vw, 170px);
   transform: translateX(-50%);
   isolation: isolate;
-  transition: background 0.35s ease, border-color 0.22s ease, color 0.22s ease, transform 0.35s ease;
+  transition: background 0.35s ease, border-color 0.5s ease, color 0.5s ease, transform 0.35s ease;
 }
 
 .scene-nav .booking-button::before {
@@ -692,9 +730,11 @@ body {
 .scene-nav .booking-button > span {
   position: relative;
   z-index: 1;
+  font-family: "Milker UI", sans-serif;
+  text-transform: lowercase;
   color: #000;
-  -webkit-text-fill-color: #000;
-  transition: color 1.2s ease;
+  -webkit-text-fill-color: currentColor;
+  transition: color 0.5s ease, -webkit-text-fill-color 0.5s ease;
 }
 
 .booking-title {
@@ -753,7 +793,7 @@ body {
   position: absolute;
   right: clamp(240px, 35vw, 500px);
   left: clamp(240px, 35vw, 500px);
-  top: 77%;
+  top: 70%;
   z-index: 8;
   display: flex;
   width: auto;
@@ -1001,7 +1041,7 @@ body {
   .hero-actions {
     right: 70px;
     left: 70px;
-    top: 77%;
+    top: 70%;
     width: auto;
     gap: 12px;
     transform: translateY(-50%);

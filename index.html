@@ -304,11 +304,21 @@
           document.documentElement.style.setProperty(variable, `rgb(${target} ${target} ${target})`);
         };
         setGroupContrast(getGroupRect(socialLinks), "--social-ink");
-        const topRightTarget = slideshowIndex === 1 || slideshowIndex === 3 ? 255 : 0;
-        const topRightColor = `rgb(${topRightTarget} ${topRightTarget} ${topRightTarget})`;
+        const lightTextImages = slideshowIndex === 1 || slideshowIndex === 3 || slideshowIndex === 4;
+        const cornerTextTarget = lightTextImages ? 255 : 0;
+        const cornerTextColor = `rgb(${cornerTextTarget} ${cornerTextTarget} ${cornerTextTarget})`;
+        const topLeftText = topLeftLink.querySelector("span");
         const topRightText = topRightLink.querySelector("span");
-        topRightLink.style.color = topRightColor;
-        topRightText.style.color = topRightColor;
+        topLeftLink.style.color = cornerTextColor;
+        topLeftText.style.color = cornerTextColor;
+        topLeftText.style.webkitTextFillColor = cornerTextColor;
+        bookingButton.style.color = cornerTextColor;
+        bookingButton.style.borderColor = cornerTextColor;
+        const bookingText = bookingButton.querySelector("span");
+        bookingText.style.color = cornerTextColor;
+        bookingText.style.webkitTextFillColor = cornerTextColor;
+        topRightLink.style.color = cornerTextColor;
+        topRightText.style.color = cornerTextColor;
       }
 
       function crossfadeToNextImage() {
