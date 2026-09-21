@@ -813,7 +813,7 @@ body {
   height: 152px;
   min-height: 152px;
   padding: 0;
-  overflow: visible;
+  overflow: hidden;
   border: 0;
   border-radius: 12px;
   background: #181818;
