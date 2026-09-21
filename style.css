@@ -626,8 +626,8 @@ body {
 .scene-nav > a:last-of-type,
 .scene-nav > a:last-of-type > span {
   color: #000;
-  -webkit-text-fill-color: #000;
-  transition: color 0.38s ease, -webkit-text-fill-color 0.38s ease, opacity 0.2s ease;
+  -webkit-text-fill-color: currentColor;
+  transition: color 0.5s ease, -webkit-text-fill-color 0.5s ease, opacity 0.2s ease;
 }
 
 .hero-actions a > span {
